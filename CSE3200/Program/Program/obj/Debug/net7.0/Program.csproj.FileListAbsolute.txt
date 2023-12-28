@@ -1,0 +1,14 @@
+F:\Personal\University\3.2\CSE3200\Program\Program\obj\Debug\net7.0\Program.GeneratedMSBuildEditorConfig.editorconfig
+F:\Personal\University\3.2\CSE3200\Program\Program\obj\Debug\net7.0\Program.AssemblyInfoInputs.cache
+F:\Personal\University\3.2\CSE3200\Program\Program\obj\Debug\net7.0\Program.AssemblyInfo.cs
+F:\Personal\University\3.2\CSE3200\Program\Program\obj\Debug\net7.0\Program.csproj.CoreCompileInputs.cache
+F:\Personal\University\3.2\CSE3200\Program\Program\bin\Debug\net7.0\Program.exe
+F:\Personal\University\3.2\CSE3200\Program\Program\bin\Debug\net7.0\Program.deps.json
+F:\Personal\University\3.2\CSE3200\Program\Program\bin\Debug\net7.0\Program.runtimeconfig.json
+F:\Personal\University\3.2\CSE3200\Program\Program\bin\Debug\net7.0\Program.dll
+F:\Personal\University\3.2\CSE3200\Program\Program\bin\Debug\net7.0\Program.pdb
+F:\Personal\University\3.2\CSE3200\Program\Program\obj\Debug\net7.0\Program.dll
+F:\Personal\University\3.2\CSE3200\Program\Program\obj\Debug\net7.0\refint\Program.dll
+F:\Personal\University\3.2\CSE3200\Program\Program\obj\Debug\net7.0\Program.pdb
+F:\Personal\University\3.2\CSE3200\Program\Program\obj\Debug\net7.0\Program.genruntimeconfig.cache
+F:\Personal\University\3.2\CSE3200\Program\Program\obj\Debug\net7.0\ref\Program.dll

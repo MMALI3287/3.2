@@ -1,0 +1,20 @@
+D:\University\SD5 Assignment\PictureViewer\bin\Debug\PictureViewer.exe.config
+D:\University\SD5 Assignment\PictureViewer\bin\Debug\PictureViewer.exe
+D:\University\SD5 Assignment\PictureViewer\bin\Debug\PictureViewer.pdb
+D:\University\SD5 Assignment\PictureViewer\obj\Debug\PictureViewer.csproj.AssemblyReference.cache
+D:\University\SD5 Assignment\PictureViewer\obj\Debug\PictureViewer.Form1.resources
+D:\University\SD5 Assignment\PictureViewer\obj\Debug\PictureViewer.Properties.Resources.resources
+D:\University\SD5 Assignment\PictureViewer\obj\Debug\PictureViewer.csproj.GenerateResource.cache
+D:\University\SD5 Assignment\PictureViewer\obj\Debug\PictureViewer.csproj.CoreCompileInputs.cache
+D:\University\SD5 Assignment\PictureViewer\obj\Debug\PictureViewer.exe
+D:\University\SD5 Assignment\PictureViewer\obj\Debug\PictureViewer.pdb
+F:\Personal\University\3.2\CSE3200\Assignments\PictureViewer\bin\Debug\PictureViewer.exe.config
+F:\Personal\University\3.2\CSE3200\Assignments\PictureViewer\bin\Debug\PictureViewer.exe
+F:\Personal\University\3.2\CSE3200\Assignments\PictureViewer\bin\Debug\PictureViewer.pdb
+F:\Personal\University\3.2\CSE3200\Assignments\PictureViewer\obj\Debug\PictureViewer.csproj.AssemblyReference.cache
+F:\Personal\University\3.2\CSE3200\Assignments\PictureViewer\obj\Debug\PictureViewer.Form1.resources
+F:\Personal\University\3.2\CSE3200\Assignments\PictureViewer\obj\Debug\PictureViewer.Properties.Resources.resources
+F:\Personal\University\3.2\CSE3200\Assignments\PictureViewer\obj\Debug\PictureViewer.csproj.GenerateResource.cache
+F:\Personal\University\3.2\CSE3200\Assignments\PictureViewer\obj\Debug\PictureViewer.csproj.CoreCompileInputs.cache
+F:\Personal\University\3.2\CSE3200\Assignments\PictureViewer\obj\Debug\PictureViewer.exe
+F:\Personal\University\3.2\CSE3200\Assignments\PictureViewer\obj\Debug\PictureViewer.pdb
