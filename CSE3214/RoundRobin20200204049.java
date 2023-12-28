@@ -49,27 +49,25 @@ public class RoundRobin20200204049 {
 
         while (!readyQueue.isEmpty()) {
             Process process = readyQueue.poll();
-            if (process != null) {
-                int executionTime = Math.min(timeQuantum, process.cpuTimeLeft);
-                process.cpuTimeLeft -= executionTime;
-                currentTime += executionTime;
+            int executionTime = Math.min(timeQuantum, process.cpuTimeLeft);
+            process.cpuTimeLeft -= executionTime;
+            currentTime += executionTime;
 
-                System.out.print("--" + (char) (START_CHAR + process.processNumber) + "--" + currentTime);
+            System.out.print("-- " + (char) (START_CHAR + process.processNumber) + " --" + currentTime);
 
-                while (processIndex < numberOfProcesses && processes[processIndex].arrivalTime <= currentTime) {
-                    Process nextProcess = processes[processIndex];
-                    nextProcess.waitingTime += currentTime - nextProcess.arrivalTime;
-                    readyQueue.add(nextProcess);
-                    processIndex++;
-                }
+            while (processIndex < numberOfProcesses && processes[processIndex].arrivalTime <= currentTime) {
+                Process nextProcess = processes[processIndex];
+                // nextProcess.waitingTime += currentTime - nextProcess.arrivalTime;
+                readyQueue.add(nextProcess);
+                processIndex++;
+            }
 
-                if (process.cpuTimeLeft > 0) {
-                    readyQueue.add(process);
-                } else {
-                    process.completionTime = currentTime;
-                    process.turnaroundTime = process.completionTime - process.arrivalTime;
-                    process.waitingTime = process.turnaroundTime - process.cpuBurstTime;
-                }
+            if (process.cpuTimeLeft > 0) {
+                readyQueue.add(process);
+            } else {
+                process.completionTime = currentTime;
+                process.turnaroundTime = process.completionTime - process.arrivalTime;
+                process.waitingTime = process.turnaroundTime - process.cpuBurstTime;
             }
         }
 

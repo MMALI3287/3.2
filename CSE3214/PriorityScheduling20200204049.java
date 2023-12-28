@@ -65,11 +65,10 @@ public class PriorityScheduling20200204049 {
                 currentProcess.waitingTime = currentProcess.turnaroundTime - currentProcess.cpuBurstTime;
 
                 for (int j = 0; j < burstTime; j++) {
-                    System.out.print("--" + (char) ('A' + currentProcess.processNumber) + "--");
+                    System.out.print("-- " + (char) ('A' + currentProcess.processNumber) + " --" + currentTime);
                 }
 
                 completedProcesses.add(currentProcess);
-                System.out.print(currentTime);
             } else {
                 currentTime = processes[index].arrivalTime;
             }
@@ -107,7 +106,7 @@ public class PriorityScheduling20200204049 {
                 currentProcess.cpuBurstTime -= burstTime;
 
                 for (int j = 0; j < burstTime; j++) {
-                    System.out.print("--" + (char) ('A' + currentProcess.processNumber) + "--");
+                    System.out.print("-- " + (char) ('A' + currentProcess.processNumber) + " --" + currentTime);
                 }
 
                 if (currentProcess.cpuBurstTime > 0) {
@@ -118,7 +117,6 @@ public class PriorityScheduling20200204049 {
                     currentProcess.waitingTime = currentProcess.turnaroundTime - currentProcess.originalCpuBurstTime;
                     completedProcesses.add(currentProcess);
                 }
-                System.out.print(currentTime);
             } else if (index < processes.length) {
                 currentTime = processes[index].arrivalTime;
             }

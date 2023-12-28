@@ -13,6 +13,8 @@ class Process {
 }
 
 public class ShortestRemainingTimeNext {
+    private static final char START_CHAR = 'A';
+
     public static void main(String[] args) {
         Scanner inputScanner = new Scanner(System.in);
         System.out.print("Enter the number of processes: ");
@@ -35,42 +37,35 @@ public class ShortestRemainingTimeNext {
 
         int currentTime = 0;
         int index = 0;
+        int executionTime = 1;
 
         System.out.println("\nGantt Chart:");
         System.out.print(currentTime);
 
-        while (!queue.isEmpty() || index < numberOfProcesses) {
+        while (index < numberOfProcesses && processes[index].arrivalTime <= currentTime) {
+            queue.add(processes[index]);
+            index++;
+        }
+
+        while (!queue.isEmpty()) {
+            Process currentProcess = queue.poll();
+            currentProcess.remainingBurstTime -= executionTime;
+            currentTime += executionTime;
+
+            System.out.print("-- " + (char) (START_CHAR + currentProcess.processNumber) + " --" + currentTime);
+
             while (index < numberOfProcesses && processes[index].arrivalTime <= currentTime) {
-                queue.add(processes[index]);
+                Process nextProcess = processes[index];
+                queue.add(nextProcess);
                 index++;
             }
 
-            if (!queue.isEmpty()) {
-                Process currentProcess = queue.poll();
-                int remainingBurstTime = currentProcess.remainingBurstTime;
-
-                currentTime += remainingBurstTime;
+            if (currentProcess.remainingBurstTime > 0) {
+                queue.add(currentProcess);
+            } else {
                 currentProcess.completionTime = currentTime;
                 currentProcess.turnaroundTime = currentProcess.completionTime - currentProcess.arrivalTime;
                 currentProcess.waitingTime = currentProcess.turnaroundTime - currentProcess.cpuBurstTime;
-                currentProcess.isFinished = true;
-
-                for (int j = 0; j < remainingBurstTime; j++) {
-                    System.out.print("--" + (char) ('A' + currentProcess.processNumber) + "--");
-                }
-
-                System.out.print(currentTime);
-
-                // Update remaining burst time for other processes
-                while (index < numberOfProcesses && processes[index].arrivalTime <= currentTime) {
-                    Process nextProcess = processes[index];
-                    if (!nextProcess.isFinished && nextProcess.remainingBurstTime < currentProcess.remainingBurstTime) {
-                        queue.add(nextProcess);
-                    }
-                    index++;
-                }
-            } else {
-                currentTime = processes[index].arrivalTime;
             }
         }
 
@@ -81,7 +76,7 @@ public class ShortestRemainingTimeNext {
         for (Process p : processes) {
             totalWaitingTime += p.waitingTime;
             totalTurnaroundTime += p.turnaroundTime;
-            System.out.print("\nProcess " + (char) ('A' + p.processNumber) +
+            System.out.print("\nProcess " + (char) (START_CHAR + p.processNumber) +
                     " - Arrival Time: " + p.arrivalTime +
                     ", CPU Burst Time: " + p.cpuBurstTime + ", Waiting Time: "
                     + p.waitingTime + ", Turnaround Time: " + p.turnaroundTime);
