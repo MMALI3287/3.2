@@ -39,6 +39,7 @@ public class PriorityScheduling20200204049 {
         preemptivePriorityScheduling(Arrays.copyOf(processes, processes.length));
     }
 
+    // Non-Preemptive Priority Scheduling
     private static void nonPreemptivePriorityScheduling(Process[] processes) {
         PriorityQueue<Process> queue = new PriorityQueue<>(Comparator.comparingInt(p -> p.priority));
         List<Process> completedProcesses = new ArrayList<>();
